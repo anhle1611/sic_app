@@ -26,7 +26,7 @@ const LoginScreen = ({ navigation }) => {
       <View style={styles.container}>
         {/* Logo ứng dụng */}
         <Image
-          source={{ uri: 'https://via.placeholder.com/150' }} // Thay bằng đường dẫn logo của bạn
+          source={require('../assets/logo.jpg')}
           style={styles.logo}
         />
 
