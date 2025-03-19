@@ -10,9 +10,8 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const LoginScreen = ({ navigation }) => {
+const ForgotPasswordScreen = ({ navigation }) => {
   const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
 
   const handleLogin = () => {
     // Xử lý logic đăng nhập (ví dụ: gọi API)
@@ -31,7 +30,7 @@ const LoginScreen = ({ navigation }) => {
         />
 
         {/* Tiêu đề */}
-        <Text style={styles.title}>Đăng nhập</Text>
+        <Text style={styles.title}>Quên mật khẩu</Text>
 
         {/* Trường nhập Username */}
         <TextInput
@@ -41,34 +40,15 @@ const LoginScreen = ({ navigation }) => {
           onChangeText={setUsername}
           autoCapitalize="none"
         />
-
-        {/* Trường nhập Password */}
-        <TextInput
-          style={styles.input}
-          placeholder="Mật khẩu"
-          value={password}
-          onChangeText={setPassword}
-          secureTextEntry // Ẩn mật khẩu
-          autoCapitalize="none"
-        />
-
         {/* Nút Đăng nhập */}
         <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
-          <Text style={styles.buttonText}>Đăng nhập</Text>
+          <Text style={styles.buttonText}>Tạo lại mật khẩu</Text>
         </TouchableOpacity>
-
-        {/* Nút Quên mật khẩu */}
-        <TouchableOpacity
-          style={styles.linkButton}
-          onPress={() => navigation.navigate('ForgotPassword')}>
-          <Text style={styles.linkText}>Quên mật khẩu?</Text>
-        </TouchableOpacity>
-
         {/* Nút Đăng ký */}
         <TouchableOpacity
           style={styles.linkButton}
-          onPress={() => navigation.navigate('Register')}>
-          <Text style={styles.linkText}>Chưa có tài khoản? Đăng ký</Text>
+          onPress={() => navigation.navigate('Login')}>
+          <Text style={styles.linkText}>Bạn đã có tài khoản? Đăng nhập</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -129,4 +109,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginScreen;
+export default ForgotPasswordScreen;
