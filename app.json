@@ -30,7 +30,8 @@
     "extra": {
       "eas": {
         "projectId": "58f89c16-9979-4d96-9b8b-350d46b068c1"
-      }
+      },
+      "apiUrl": "http://localhost:8000"
     },
     "owner": "anhlh97"
   }
